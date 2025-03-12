@@ -1,0 +1,440 @@
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+// Partial Files
+@import "./mixin";
+@import "./reset";
+@import "./variables";
+
+body {
+  font-family: $font-primary;
+}
+
+// --------- container--------
+.container {
+  @include container(1440px);
+  @include flex(flex-start, center, column, 0, 120px);
+}
+
+// --------hero section------
+.hero {
+  width: 100%;
+  padding: 32px 135px 66px 135px;
+  @include flex(flex-start, flex-start, column, 0, 80px);
+  background: $cover-bg-gradinet, url("../images/bg-pattern.png");
+  @include background-style(center, no-repeat, cover);
+  position: relative;
+  overflow: hidden;
+  /* hero_content */
+  &__content {
+    @include flex(flex-start, flex-start, row, 64px, 0);
+    width: 100%;
+  }
+
+  &__text {
+    width: 570px;
+  }
+  &__title {
+    @include font-style(700, 62px, 74.4px, -2px);
+    margin-bottom: 24px;
+    background-image: $main-title-gradient;
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 3s linear infinite;
+  }
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  &__paragraph {
+    @include font-style(400, 20px, 28px, -0.5px);
+    margin-bottom: 32px;
+    color: $color-darker;
+  }
+  &__button {
+    width: 380px;
+    height: 64px;
+    border-radius: $radius8;
+    border: 2px solid $color-darkest;
+    background: $color-lighter;
+    @include font-style(600, 18px, 23.4px, -1px);
+    @include flex(center, center, row, 16px, 0);
+    margin-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $section-btn-hover;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+  &__reviews {
+    @include flex(flex-start, center, row, 12px, 0);
+  }
+  &__span {
+    @include font-style(400, 14px, 16.8px, -1px);
+    color: $color-darker;
+  }
+  /* hero_content_img_box */
+  &__img-box {
+    width: 540px;
+    height: 606px;
+  }
+  &__image {
+    @include image-style;
+    border-radius: $radius8;
+  }
+  /* glow_bg */
+  &__glow-bg {
+    position: absolute;
+    top: 40%;
+    left: 60%;
+  }
+}
+
+//  ------together section------
+.together {
+  @include flex(center, center, row, 80px, 0);
+
+  &__img-box {
+    width: 560px;
+    height: 520px;
+  }
+  &__img {
+    @include image-style;
+    border-radius: $radius8;
+  }
+  &__texts {
+    width: 530px;
+  }
+  &__title {
+    @include font-style(600, 50px, 65px, -2px);
+    margin-bottom: 34px;
+    color: $color-darkest;
+  }
+  &__checkbox-container {
+    @include flex(flex-start, flex-start, column, 0, 24px);
+    @include font-style(400, 24px, 32px, -0.5px);
+    color: $color-darker;
+  }
+  &__checkbox {
+    @include flex(flex-start, center, row, 14px, 0);
+  }
+}
+
+// --------everage section---------
+.everage {
+  @include flex(center, center, row, 80px, 0);
+  position: relative;
+
+  &__texts {
+    width: 530px;
+  }
+
+  &__title {
+    @include font-style(600, 50px, 65px, -2px);
+    margin-bottom: 24px;
+    color: $color-darkest;
+  }
+
+  &__span {
+    position: relative;
+    &::after {
+      content: url("../images/pattern-circle.png");
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__paragraph {
+    @include font-style(400, 20px, 28px, -0.5px);
+    color: $color-darker;
+    strong {
+      font-weight: 700;
+    }
+  }
+  &__img-box {
+    width: 560px;
+    height: 520px;
+  }
+
+  &__img {
+    @include image-style;
+    border-radius: $radius8;
+  }
+
+  &__logos-tech {
+    position: absolute;
+    bottom: 31px;
+  }
+}
+
+// -----------journey section------------
+.journey {
+  @include container(1170px);
+  padding: 60px 80px;
+  background: $cover-bg-gradinet, url("../images/bg-pattern.png");
+  @include background-style(center, no-repeat, cover);
+  position: relative;
+  overflow: hidden;
+
+  &__title {
+    @include font-style(600, 50px, 60px, -4%);
+    text-align: center;
+    color: $color-darkest;
+    margin-bottom: 64px;
+  }
+
+  &__box {
+    display: grid;
+    column-gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__step-number-arrow {
+    @include flex(space-between, flex-start, row, 0, 0);
+    margin-bottom: 24px;
+  }
+
+  &__step-number {
+    width: 40px;
+    height: 40px;
+    border: 2px solid $color-darkest;
+    border-radius: $radius4;
+    @include flex(center, center, row, 0, 0);
+  }
+
+  &__subtitle {
+    @include font-style(600, 18px, 23.4px, -1px);
+    color: $color-darkest;
+  }
+
+  &__glow-bg {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+  }
+}
+
+// -------membership_options section--------
+.options {
+  @include container(970px);
+
+  &__title {
+    @include font-style(600, 50px, 65px, -2px);
+    text-align: center;
+    margin-bottom: 64px;
+    color: $color-darkest;
+  }
+  &__container {
+    @include flex(flex-start, center, row, 24px, 0);
+  }
+
+  &__card {
+    border: 1px solid $color-medium;
+    border-radius: $radius8;
+    &:nth-child(odd) {
+      flex: 1 1 286px;
+      padding: 24px;
+    }
+
+    &:nth-child(even) {
+      flex: 1 1 350px;
+      padding: 40px 24px;
+      background: $card-garient;
+    }
+  }
+
+  &__name {
+    @include font-style(600, 24px, 26.4px, -1px);
+    color: $color-darkest;
+    margin-bottom: 24px;
+  }
+
+  &__price-container {
+    @include flex(flex-start, center, row, 8px, 0);
+    margin-bottom: 24px;
+  }
+
+  &__price {
+    @include font-style(600, 34px, 44.2px, -1px);
+    color: $color-darkest;
+  }
+
+  &__price-duration {
+    @include font-style(400, 20px, 28px, -0.5px);
+    color: $color-darker;
+  }
+
+  &__divider {
+    width: 100%;
+    height: 1px;
+    background-color: $color-medium;
+    margin-bottom: 24px;
+  }
+
+  &__features-container {
+    @include flex(flex-start, flex-start, column, 0, 16px);
+    margin-bottom: 32px;
+  }
+
+  &__feature-item {
+    @include flex(flex-start, center, row, 0, 0);
+    column-gap: 12px;
+    font-family: "Inter", serif;
+    @include font-style(400, 20px, 28px, -0.5px);
+    color: $color-darker;
+  }
+
+  &__btn {
+    width: 100%;
+    height: 63px;
+    border-radius: $radius8;
+    border: 2px solid $color-darkest;
+    background: $color-lighter;
+    @include font-style(600, 18px, 23.4px, -1px);
+    color: $color-darkest;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    z-index: 1;
+
+    /* button hover  */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $section-btn-hover;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}
+
+// -------testimonial section--------
+.testimonial {
+  @include container(970px);
+  @include flex(flex-start, center, column, 0, 32px);
+  text-align: center;
+  &__stars {
+    @include flex(flex-start, flex-start, row, 6px, 0);
+  }
+  &__title {
+    @include font-style(600, 34px, 44.2px, -1px);
+    color: $color-darkest;
+  }
+
+  &__paragraph {
+    font-family: "Inter", serif;
+    @include font-style(400, 20px, 28px, -0.5px);
+    color: $color-darker;
+  }
+}
+
+// ------- footer --------
+.footer {
+  @include container(1440px);
+  background: $color-darkest;
+  @include flex(flex-start, center, column, 0, 0);
+  padding: 80px 135px 0;
+  &__main-content {
+    width: 753px;
+    @include flex(flex-start, center, column, 0, 0);
+    margin-bottom: 64px;
+  }
+
+  &__title {
+    @include font-style(600, 50px, 65px, -2px);
+    text-align: center;
+    color: $color-lightest;
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    width: 380px;
+    height: 64px;
+    border-radius: $radius8;
+    border: 2px solid $color-pure-white;
+    background: transparent;
+    @include flex(center, center, row, 16px, 0);
+    @include font-style(600, 18px, 23.4px, -1px);
+    color: $color-pure-white;
+    margin-bottom: 24px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $footer-btn-hover;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+  &__reviews {
+    @include flex(flex-start, center, row, 12px, 0);
+  }
+
+  &__star-span {
+    @include font-style(400, 14px, 16.8px, -1px);
+    color: $color-pure-white;
+  }
+
+  &__copyright-content {
+    width: 100%;
+    padding-block: 24px;
+    @include flex(space-between, center, row, 0, 0);
+  }
+
+  &__paragraph {
+    @include font-style(400, 14px, 16.8px, -1px);
+    color: $color-pure-white;
+  }
+
+  &__social-media {
+    @include flex(flex-start, center, row, 24px, 0);
+  }
+}
