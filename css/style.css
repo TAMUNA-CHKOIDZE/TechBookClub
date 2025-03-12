@@ -193,9 +193,11 @@ a {
   .together__img-box {
     width: 100% !important;
     height: 654px !important;
+    order: 2 !important;
   }
   .together__texts {
     width: 100% !important;
+    order: 1 !important;
   }
 }
 body {
