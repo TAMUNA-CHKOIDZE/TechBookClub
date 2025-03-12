@@ -140,6 +140,38 @@ a {
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 768px) {
+  .hero {
+    width: 100%;
+    padding: 32px !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    row-gap: 64px !important;
+    /* hero_content */
+  }
+  .hero__content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column !important;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    row-gap: 64px !important;
+    width: 100%;
+  }
+  .hero__img-box {
+    width: 100% !important;
+    height: 790px !important;
+  }
+  .hero__glow-bg {
+    top: 60% !important;
+    left: 60%;
+  }
+}
 body {
   font-family: "Martian Mono", serif;
 }

@@ -1,0 +1,27 @@
+@media screen and (max-width: 768px) {
+  // --------hero section------
+  .hero {
+    width: 100%;
+    padding: 32px !important;
+    @include flex(flex-start, flex-start, column, 0, 64px !important);
+    /* hero_content */
+    &__content {
+      @include flex(
+        flex-start,
+        flex-start,
+        column !important,
+        0,
+        64px !important
+      );
+      width: 100%;
+    }
+    &__img-box {
+      width: 100% !important;
+      height: 790px !important;
+    }
+    &__glow-bg {
+      top: 60% !important;
+      left: 60%;
+    }
+  }
+}
