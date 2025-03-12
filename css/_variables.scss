@@ -1,0 +1,25 @@
+// colors
+$color-darkest: #062630;
+$color-darker: #385159;
+$color-medium: #e6e1df;
+$color-lighter: #fff5ef;
+$color-lightest: #faf5f3;
+$color-pure-white: #ffffff;
+// font-family
+$font-primary: "Martian Mono", serif;
+// gradinets 
+$main-title-gradient: linear-gradient(90deg, #b36a5e, #0f172a);
+$cover-bg-gradinet: linear-gradient(
+  rgba(250, 245, 243, 0.5),
+  rgba(250, 245, 243, 0.5)
+);
+$card-garient: linear-gradient(
+  to bottom right,
+  #e6e1df 50%,
+  rgba(156, 201, 218, 0.7)
+);
+$section-btn-hover: linear-gradient(90deg, #ffe2d1 0%, #fff5ef 100%);
+$footer-btn-hover: linear-gradient(90deg, #385159 0%, #062630 100%);
+// radius 
+$radius8: 8px;
+$radius4: 4px;
