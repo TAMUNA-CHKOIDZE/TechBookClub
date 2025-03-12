@@ -141,6 +141,15 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    row-gap: 80px !important;
+  }
   .hero {
     width: 100%;
     padding: 32px !important;
@@ -170,6 +179,23 @@ a {
   .hero__glow-bg {
     top: 60% !important;
     left: 60%;
+  }
+  .together {
+    padding-inline: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    row-gap: 40px !important;
+  }
+  .together__img-box {
+    width: 100% !important;
+    height: 654px !important;
+  }
+  .together__texts {
+    width: 100% !important;
   }
 }
 body {

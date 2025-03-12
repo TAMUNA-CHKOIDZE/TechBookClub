@@ -1,4 +1,8 @@
 @media screen and (max-width: 768px) {
+  // --------- container--------
+  .container {
+    @include flex(flex-start, center, column, 0, 80px !important);
+  }
   // --------hero section------
   .hero {
     width: 100%;
@@ -22,6 +26,18 @@
     &__glow-bg {
       top: 60% !important;
       left: 60%;
+    }
+  }
+  //  ------together section------
+  .together {
+    padding-inline: 32px;
+    @include flex(center, center, column !important, 0, 40px !important);
+    &__img-box {
+      width: 100% !important;
+      height: 654px !important;
+    }
+    &__texts {
+      width: 100% !important;
     }
   }
 }
