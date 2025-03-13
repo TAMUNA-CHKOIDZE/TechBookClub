@@ -45,14 +45,36 @@
   // --------everage section---------
   .everage {
     padding-inline: 32px;
-     @include
-      flex(center, center, column !important, 0, 40px !important);
+    @include flex(center, center, column !important, 0, 40px !important);
     &__texts {
       width: 100% !important;
     }
     &__img-box {
       width: 100% !important;
       height: 670px !important;
+    }
+  }
+  // -----------journey section------------
+  .journey {
+    padding-inline: 32px !important;
+    &__title {
+      text-align: left !important;
+    }
+    &__box {
+      gap: 24px !important;
+      grid-template-columns: 1fr !important;
+    }
+    &__step-number-arrow {
+      margin-bottom: 0 !important;
+    }
+    &__box-item {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+    }
+
+    &__step-number-arrow img {
+      display: none;
     }
   }
 }
