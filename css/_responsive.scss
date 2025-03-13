@@ -77,4 +77,27 @@
       display: none;
     }
   }
+  // -------membership_options section--------
+  .options {
+    padding-inline: 32px !important;
+    &__title {
+      text-align: left !important;
+      margin-bottom: 40px !important;
+    }
+    &__container {
+      @include flex(flex-start, center, row, 24px, 24px !important);
+      flex-wrap: wrap;
+    }
+    &__card {
+      &:nth-child(odd) {
+        flex: 0 1 340px !important;
+        padding: 24px;
+      }
+  
+      &:nth-child(even) {
+        flex: 0 1 340px !important;
+        padding: 24px !important;
+      }
+    }
+  }
 }
