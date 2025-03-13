@@ -42,4 +42,17 @@
       order: 1 !important;
     }
   }
+  // --------everage section---------
+  .everage {
+    padding-inline: 32px;
+     @include
+      flex(center, center, column !important, 0, 40px !important);
+    &__texts {
+      width: 100% !important;
+    }
+    &__img-box {
+      width: 100% !important;
+      height: 670px !important;
+    }
+  }
 }

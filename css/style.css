@@ -199,6 +199,23 @@ a {
     width: 100% !important;
     order: 1 !important;
   }
+  .everage {
+    padding-inline: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    row-gap: 40px !important;
+  }
+  .everage__texts {
+    width: 100% !important;
+  }
+  .everage__img-box {
+    width: 100% !important;
+    height: 670px !important;
+  }
 }
 body {
   font-family: "Martian Mono", serif;
