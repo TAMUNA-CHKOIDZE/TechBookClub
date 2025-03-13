@@ -170,7 +170,9 @@ a {
     -moz-column-gap: 0;
          column-gap: 0;
     row-gap: 64px !important;
-    width: 100%;
+  }
+  .hero__text {
+    width: 98% !important;
   }
   .hero__img-box {
     width: 100% !important;
@@ -261,6 +263,17 @@ a {
   .options__card:nth-child(even) {
     flex: 0 1 340px !important;
     padding: 24px !important;
+  }
+  .testimonial {
+    padding: 32px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start !important;
+    flex-direction: column;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    row-gap: 32px;
+    text-align: left !important;
   }
 }
 body {
