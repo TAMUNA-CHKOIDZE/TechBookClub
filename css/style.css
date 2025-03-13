@@ -237,6 +237,31 @@ a {
   .journey__step-number-arrow img {
     display: none;
   }
+  .options {
+    padding-inline: 32px !important;
+  }
+  .options__title {
+    text-align: left !important;
+    margin-bottom: 40px !important;
+  }
+  .options__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+    row-gap: 24px !important;
+    flex-wrap: wrap;
+  }
+  .options__card:nth-child(odd) {
+    flex: 0 1 340px !important;
+    padding: 24px;
+  }
+  .options__card:nth-child(even) {
+    flex: 0 1 340px !important;
+    padding: 24px !important;
+  }
 }
 body {
   font-family: "Martian Mono", serif;
