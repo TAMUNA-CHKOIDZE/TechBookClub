@@ -124,7 +124,6 @@
   // --------- container--------
   .container {
     @include flex(flex-start, center, column, 0, 64px !important);
-    border: 2px solid red;
   }
   // --------hero section------
   .hero {
