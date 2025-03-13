@@ -216,6 +216,27 @@ a {
     width: 100% !important;
     height: 670px !important;
   }
+  .journey {
+    padding-inline: 32px !important;
+  }
+  .journey__title {
+    text-align: left !important;
+  }
+  .journey__box {
+    gap: 24px !important;
+    grid-template-columns: 1fr !important;
+  }
+  .journey__step-number-arrow {
+    margin-bottom: 0 !important;
+  }
+  .journey__box-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .journey__step-number-arrow img {
+    display: none;
+  }
 }
 body {
   font-family: "Martian Mono", serif;
