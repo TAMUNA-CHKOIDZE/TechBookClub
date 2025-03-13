@@ -294,7 +294,6 @@ a {
     -moz-column-gap: 0;
          column-gap: 0;
     row-gap: 64px !important;
-    border: 2px solid red;
   }
   .hero {
     padding: 24px 16px 80px !important;
