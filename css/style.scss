@@ -137,11 +137,13 @@ body {
   }
   &__checkbox-container {
     @include flex(flex-start, flex-start, column, 0, 24px);
-    @include font-style(400, 24px, 32px, -0.5px);
-    color: $color-darker;
   }
   &__checkbox {
     @include flex(flex-start, center, row, 14px, 0);
+    span {
+      @include font-style(400, 20px, 140%, -0.5px);
+      color: $color-darker;
+    }
   }
 }
 
@@ -428,6 +430,7 @@ body {
     width: 100%;
     padding-block: 24px;
     @include flex(space-between, center, row, 0, 0);
+    border-top: 1px solid $color-darker;
   }
 
   &__paragraph {

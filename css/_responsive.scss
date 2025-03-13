@@ -119,3 +119,109 @@
     }
   }
 }
+
+@media screen and (max-width: 376px) {
+  // --------- container--------
+  .container {
+    @include flex(flex-start, center, column, 0, 64px !important);
+    border: 2px solid red;
+  }
+  // --------hero section------
+  .hero {
+    padding: 24px 16px 80px !important;
+    &__text {
+      width: 100% !important;
+    }
+    &__title {
+      @include font-style(700, 38px !important, 120% !important, -2px);
+    }
+    &__button {
+      width: 100% !important;
+      @include font-style(600, 16px !important, 130% !important, -1px);
+    }
+    /* hero_content_img_box */
+    &__img-box {
+      height: 385px !important;
+    }
+    /* glow_bg */
+    &__glow-bg {
+      position: absolute;
+      top: 50% !important;
+      left: 30% !important;
+    }
+  }
+  //  ------together section------
+  .together {
+    padding-inline: 16px !important;
+    &__img-box {
+      height: 327px !important;
+    }
+    &__title {
+      @include font-style(600, 34px !important, 130% !important, -2px);
+      margin-bottom: 14px !important;
+    }
+    &__checkbox-container {
+      @include flex(flex-start, flex-start, column, 0, 16px !important);
+    }
+  }
+  // --------everage section---------
+  .everage {
+    padding-inline: 16px !important;
+    &__title {
+      @include font-style(600, 34px !important, 130% !important, -2px);
+    }
+    &__span {
+      &::after {
+        content: url("../images/circle-mobile.svg") !important;
+      }
+    }
+    &__img-box {
+      height: 318px !important;
+    }
+    &__logos-tech {
+      display: none;
+    }
+  }
+  // -----------journey section------------
+  .journey {
+    padding: 64px 16px !important;
+    &__title {
+      @include font-style(600, 34px !important, 130% !important, -4%);
+      margin-bottom: 24px !important;
+    }
+    &__glow-bg {
+      top: 60%;
+      left: 30%;
+    }
+  }
+  // -------membership_options section--------
+  .options {
+    padding-inline: 16px !important;
+
+    &__title {
+      @include font-style(600, 34px !important, 130% !important, -2px);
+      margin-bottom: 24px !important;
+    }
+  }
+  // -------testimonial section--------
+  .testimonial {
+    padding-inline: 16px !important;
+    &__title {
+      @include font-style(600, 24px !important, 110% !important, -1px);
+    }
+  }
+  // ------- footer --------
+  .footer {
+    padding: 48px 16px 0 !important;
+    &__title {
+      @include font-style(600, 34px !important, 130% !important, -2px);
+    }
+    &__btn {
+      @include font-style(600, 16px !important, 130% !important, -1px);
+    }
+    &__copyright-content {
+      padding-block: 24px;
+      @include flex(space-between, center, column !important, 0, 16px !important);
+    }
+  }
+}
